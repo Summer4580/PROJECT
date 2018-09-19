@@ -7,17 +7,20 @@
 //
 
 import Foundation
-
-var numbers = [5,4,6,3,7,8,1,2,9]
-var x = 0
-for i in 0..<numbers.count{
-    for j in 0..<(numbers.count-i-1){
-        if numbers[j] > numbers[j+1] {
-            x = numbers[j]
-            numbers[j] = numbers[j+1]
-            numbers[j+1] = x
+var students = [(num: 4580,sex: "n",name: "wangxu",score: 99),
+                (num: 4582,sex: "s",name: "wang",score: 80),
+                (num: 4583,sex: "n",name: "xu",score: 78),
+                (num: 4581,sex: "s",name: "wx",score: 98),
+                (num: 4585,sex: "n",name: "u",score: 66)]
+var x:(Int,String,String,Int)
+for i in 0..<students.count{
+    for j in 0..<(students.count-i-1){
+        if students[j].score < students[j+1].score {
+            x = students[j]
+            students[j] = students[j+1]
+            students[j+1] = x
         }
     }
 }
-print(numbers)
+print(students)
 
