@@ -22,5 +22,7 @@ for i in 0..<students.count{
         }
     }
 }
-print(students)
+for student in students{
+    print(student)
+}
 
