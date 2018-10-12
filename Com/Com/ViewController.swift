@@ -26,28 +26,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func setnum(_ sender: UIButton) {
+        let a = sender.currentTitle
         if(resulttxt.text! != "0" && isfinash == false){
-            resulttxt.text! += String(sender.tag)
+            resulttxt.text! += String(a!)
         }else{
-            resulttxt.text! = String(sender.tag)
+            resulttxt.text! = String(a!)
             isfinash = false
         }
     }
 
-    @IBAction func setfh(_ sender: UIButton) {
+    @IBAction func setSign(_ sender: UIButton) {
         if(fristval == 0){
-            fristval = (resulttxt.text! as NSString).doubleValue
+            fristval = Double(resulttxt.text!)!
         }else{
-            onjs(sender)
+            onCCT(sender)
         }
         fhval = sender.tag
         isfinash = true
     }
     
     
-    @IBAction func onjs(_ sender: Any) {
+    @IBAction func onCCT(_ sender: Any) {
         if fristval != 0 && fhval != 0 {
-            sencendval = (resulttxt.text! as NSString).doubleValue
+//            sencendval = (resulttxt.text! as NSString).doubleValue
+            sencendval = Double(resulttxt.text!)!
             switch (fhval){
             case 1:
                 fristval += sencendval
@@ -64,7 +66,7 @@ class ViewController: UIViewController {
             let len = result.characters.index(of:".")
             let str = "0"+result.substring(from: len!)
             
-            if ((str as NSString).doubleValue == 0)
+            if ((Double(str)!) == 0)
             {
                 result = result.substring(to: len!)
             }
@@ -74,26 +76,12 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func setxs(_ sender: Any) {
+    @IBAction func setPoit(_ sender: Any) {
         if(!resulttxt.text!.contains(".") && isfinash == false){
             resulttxt.text! += "."
         }
     }
     
-    @IBAction func setbfb(_ sender: Any) {
-        if resulttxt.text! != "0" {
-            fristval = (resulttxt.text! as NSString).doubleValue/100
-            resulttxt.text! = String(fristval)
-            isfinash = true
-        }
-    }
-    @IBAction func setzf(_ sender: Any) {
-        if resulttxt.text!.contains("-") {
-            resulttxt.text! = resulttxt.text!.replacingOccurrences(of: "-", with: "")
-        }else{
-            resulttxt.text! = "-"+resulttxt.text!
-        }
-    }
     @IBAction func reset(_ sender: Any) {
         resulttxt.text = "0"
         fristval = 0
