@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var resulttxt: UILabel!
@@ -15,9 +16,20 @@ class ViewController: UIViewController {
     var sencendval:Double = 0
     var fhval:Int = 0
     var isfinash:Bool = false
-    
+/*
+    @IBAction func buttoncolor(_ sender: UIButton) {
+        sender.layer.shadowOpacity = 0.8
+        sender.layer.shadowColor = UIColor.black.cgColor
+        sender.layer.shadowOffset = CGSize(width:1,height:1)
+        sender.layer.borderColor = UIColor(red:60/255,green:40/255,blue:129/255,alpha:1).cgColor
+        sender.layer.borderWidth = 1
+        sender.layer.cornerRadius = 16
+        
+    }
+*/
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
     }
     
@@ -32,6 +44,7 @@ class ViewController: UIViewController {
         }else{
             resulttxt.text! = String(a!)
             isfinash = false
+            
         }
     }
 
