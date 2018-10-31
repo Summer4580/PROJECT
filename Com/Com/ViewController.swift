@@ -45,7 +45,6 @@ class ViewController: UIViewController {
         }else{
             resulttxt.text! = String(a!)
             isfinash = false
-            
         }
     }
 
@@ -72,7 +71,10 @@ class ViewController: UIViewController {
             case 3:
                 fristval *= sencendval
             case 4:
-                fristval /= sencendval
+                if(sencendval != 0)
+                {
+                    fristval /= sencendval
+                }
             default:
                 break
             }
@@ -84,7 +86,14 @@ class ViewController: UIViewController {
             {
                 result = result.substring(to: len!)
             }
-            resulttxt.text! = result
+            if(sencendval==0)
+            {
+                resulttxt.text! = "ERROR"
+            }
+            else
+            {
+                resulttxt.text! = result
+            }
             fhval = 0
             isfinash = true
         }
