@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     var fristval:Double = 0
     var sencendval:Double = 0
     var fhval:Int = 0
-    var isfinash:Bool = false
+    var isfinash:Bool = false    //判断文本框是否为空
+    
 /*
     @IBAction func buttoncolor(_ sender: UIButton) {
         sender.layer.shadowOpacity = 0.8
@@ -76,7 +77,7 @@ class ViewController: UIViewController {
                 break
             }
             var result:String = String(fristval)
-            let len = result.characters.index(of:".")
+            let len = result.index(of:".")
             let str = "0"+result.substring(from: len!)
             
             if ((Double(str)!) == 0)
@@ -100,5 +101,47 @@ class ViewController: UIViewController {
         fristval = 0
         sencendval = 0
         fhval = 0
+    }
+    @IBAction func evolu(_ sender: Any) {
+        fristval = Double(resulttxt.text!)!
+        fristval = sqrt(fristval)
+        var result:String = String(fristval)
+        let len = result.index(of:".")   //标记小数点位置
+        let str = "0"+result.substring(from: len!)  //截取小数点后几位
+        
+        if ((Double(str)!) == 0)
+        {
+            result = result.substring(to: len!)
+        }  //判断小数点后是否为零如果为零则截取小数点前几位舍弃后几位
+        resulttxt.text! = result
+        isfinash = true
+    }
+    @IBAction func Square(_ sender: Any) {
+        fristval = Double(resulttxt.text!)!
+        fristval *= fristval
+        var result:String = String(fristval)
+        let len = result.index(of:".")
+        let str = "0"+result.substring(from: len!)
+        
+        if ((Double(str)!) == 0)
+        {
+            result = result.substring(to: len!)
+        }
+        resulttxt.text! = result
+        isfinash = true
+    }
+    @IBAction func Cicru(_ sender: Any) {
+        fristval = Double(resulttxt.text!)!
+        fristval = fristval * Double.pi
+        var result:String = String(fristval)
+        let len = result.index(of:".")
+        let str = "0"+result.substring(from: len!)
+        
+        if ((Double(str)!) == 0)
+        {
+            result = result.substring(to: len!)
+        }
+        resulttxt.text! = result
+        isfinash = true
     }
 }
