@@ -89,6 +89,7 @@ class ViewController: UIViewController {
             if(sencendval==0)
             {
                 resulttxt.text! = "ERROR"
+                fristval = 0
             }
             else
             {
@@ -113,16 +114,24 @@ class ViewController: UIViewController {
     }
     @IBAction func evolu(_ sender: Any) {
         fristval = Double(resulttxt.text!)!
-        fristval = sqrt(fristval)
-        var result:String = String(fristval)
-        let len = result.index(of:".")   //标记小数点位置
-        let str = "0"+result.substring(from: len!)  //截取小数点后几位
-        
-        if ((Double(str)!) == 0)
+        if fristval<0
         {
-            result = result.substring(to: len!)
-        }  //判断小数点后是否为零如果为零则截取小数点前几位舍弃后几位
-        resulttxt.text! = result
+            resulttxt.text! = "ERROR"
+            fristval = 0
+        }
+        else
+        {
+            fristval = sqrt(fristval)
+            var result:String = String(fristval)
+            let len = result.index(of:".")   //标记小数点位置
+            let str = "0"+result.substring(from: len!)  //截取小数点后几位
+            
+            if ((Double(str)!) == 0)
+            {
+                result = result.substring(to: len!)
+            }  //判断小数点后是否为零如果为零则截取小数点前几位舍弃后几位
+            resulttxt.text! = result
+        }
         isfinash = true
     }
     @IBAction func Square(_ sender: Any) {
