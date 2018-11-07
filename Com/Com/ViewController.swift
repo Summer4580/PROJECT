@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func onCCT(_ sender: Any) {
-        if fristval != 0 && fhval != 0 {
+        if  fhval != 0 {
 //            sencendval = (resulttxt.text! as NSString).doubleValue
             sencendval = Double(resulttxt.text!)!
             switch (fhval){
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
             {
                 result = result.substring(to: len!)
             }
-            if(sencendval==0)
+            if(sencendval==0 && fhval==4)
             {
                 resulttxt.text! = "ERROR"
                 fristval = 0
