@@ -148,18 +148,12 @@ class ViewController: UIViewController {
         resulttxt.text! = result
         isfinash = true
     }
-    @IBAction func Cicru(_ sender: Any) {
-        fristval = Double(resulttxt.text!)!
-        fristval = fristval * Double.pi
-        var result:String = String(fristval)
-        let len = result.index(of:".")
-        let str = "0"+result.substring(from: len!)
-        
-        if ((Double(str)!) == 0)
-        {
-            result = result.substring(to: len!)
+    
+    @IBAction func smallclear(_ sender: UIButton) {
+        var bstr = resulttxt.text!
+        if(resulttxt.text! != ""){
+            bstr.removeLast()
+            resulttxt.text! = bstr
         }
-        resulttxt.text! = result
-        isfinash = true
     }
 }
