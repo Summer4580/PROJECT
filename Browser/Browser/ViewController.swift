@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import WebKit
 class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var btngo: UIButton!
     @IBOutlet weak var txturl: UITextField!
-    @IBOutlet weak var webview: UIWebView!
+    @IBOutlet weak var webview: WKWebView!
     
     var loadIndicator:UIActivityIndicatorView!
     
