@@ -23,7 +23,6 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.webview.delegate = self
         
         let frame = CGRect(x: 100.0, y: 100.0, width: 32.0, height: 32.0)
         loadIndicator = UIActivityIndicatorView(frame: frame)
@@ -115,13 +114,13 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
         return true
     }
     /*
-     在 UIWebView 加载指定 URL
+     在 WKWebView 加载指定 URL
      */
     func loadUrl(_ url:String)
     {
         let urlobj = URL(string:url)
         let request = URLRequest(url:urlobj!)
-        webview.loadRequest(request);
+        webview.load(request)
     }
     
     @objc func stopClicked(_ sender:UIBarButtonItem)
@@ -156,13 +155,13 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
     }
 
     
-    func webViewDidStartLoad(_ webView:UIWebView)
+    private func webViewDidStartLoad(_ webView:WKWebView)
     {
         progBar.setProgress(0, animated:false);
         ptimer.fire();
         loadIndicator.startAnimating();
     }
-    func webViewDidFinishLoad(_ webView:UIWebView)
+    private func webViewDidFinishLoad(_ webView:WKWebView)
     {
         loadIndicator.stopAnimating();
         progBar.setProgress(1, animated:true);
@@ -183,7 +182,7 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
         }
     }
     
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+    private func webview(_ webView: WKWebView, didFailLoadWithError error: Error) {
         //999错误过滤(防止页面正在加载时候，点击stop按钮，提示NSURLErrorDomain error=-999)
         if error._code == NSURLErrorCancelled {
             return

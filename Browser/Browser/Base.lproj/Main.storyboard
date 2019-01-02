@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSP-ua-SPN">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.baidu.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSP-ua-SPN">
                                 <rect key="frame" x="24" y="81" width="222" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPC-p0-bdb">
-                                <rect key="frame" x="5" y="190" width="370" height="477"/>
+                                <rect key="frame" x="0.0" y="190" width="375" height="477"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -48,7 +48,7 @@
                     </view>
                     <connections>
                         <outlet property="btngo" destination="qWl-jw-UlU" id="F6m-AQ-mfc"/>
-                        <outlet property="txturl" destination="jSP-ua-SPN" id="EGJ-AY-27B"/>
+                        <outlet property="txturl" destination="jSP-ua-SPN" id="R7c-2M-2g8"/>
                         <outlet property="webview" destination="RPC-p0-bdb" id="5su-Ps-WIH"/>
                     </connections>
                 </viewController>
