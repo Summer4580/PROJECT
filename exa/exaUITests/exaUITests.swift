@@ -1,14 +1,14 @@
 //
-//  BrowserUITests.swift
-//  BrowserUITests
+//  exaUITests.swift
+//  exaUITests
 //
-//  Created by 20161104580 on 2018/12/28.
-//  Copyright © 2018 20161104580. All rights reserved.
+//  Created by 20161104580 on 2019/1/4.
+//  Copyright © 2019 20161104580. All rights reserved.
 //
 
 import XCTest
 
-class BrowserUITests: XCTestCase {
+class exaUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

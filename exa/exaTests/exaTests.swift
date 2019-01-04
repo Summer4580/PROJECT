@@ -1,15 +1,15 @@
 //
-//  BrowserTests.swift
-//  BrowserTests
+//  exaTests.swift
+//  exaTests
 //
-//  Created by 20161104580 on 2018/12/28.
-//  Copyright © 2018 20161104580. All rights reserved.
+//  Created by 20161104580 on 2019/1/4.
+//  Copyright © 2019 20161104580. All rights reserved.
 //
 
 import XCTest
-@testable import Browser
+@testable import exa
 
-class BrowserTests: XCTestCase {
+class exaTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
