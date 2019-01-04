@@ -26,24 +26,16 @@
                                     <action selector="searchclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIL-L0-GUR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUR-fi-KFP">
-                                <rect key="frame" x="35" y="832" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="back.png"/>
-                                <connections>
-                                    <action selector="gobackclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7rb-OG-nCd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywr-s3-XKV">
-                                <rect key="frame" x="122" y="832" width="75" height="30"/>
+                                <rect key="frame" x="130" y="831" width="43" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="-&gt;" backgroundImage="forward.png"/>
+                                <state key="normal" backgroundImage="forward.png"/>
                                 <connections>
                                     <action selector="gotoclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGS-gb-icq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5f-u8-W65">
-                                <rect key="frame" x="205" y="832" width="75" height="30"/>
+                                <rect key="frame" x="227" y="832" width="35" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="reload.png"/>
                                 <connections>
@@ -51,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-bY-OsV">
-                                <rect key="frame" x="298" y="832" width="75" height="30"/>
+                                <rect key="frame" x="319" y="833" width="39" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="stop.png"/>
                             </button>
@@ -71,6 +63,14 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUR-fi-KFP">
+                                <rect key="frame" x="50" y="830" width="41" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="back.png"/>
+                                <connections>
+                                    <action selector="gobackclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7rb-OG-nCd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
