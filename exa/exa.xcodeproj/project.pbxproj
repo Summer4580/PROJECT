@@ -14,6 +14,10 @@
 		D329D8DC21DF5E9D001CA5BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D329D8DA21DF5E9D001CA5BA /* LaunchScreen.storyboard */; };
 		D329D8E721DF5E9E001CA5BA /* exaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D329D8E621DF5E9E001CA5BA /* exaTests.swift */; };
 		D329D8F221DF5E9E001CA5BA /* exaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D329D8F121DF5E9E001CA5BA /* exaUITests.swift */; };
+		D329D90021DF6864001CA5BA /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = D329D8FF21DF6863001CA5BA /* back.png */; };
+		D329D90221DF686C001CA5BA /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D329D90121DF686B001CA5BA /* forward.png */; };
+		D329D90421DF6871001CA5BA /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = D329D90321DF6871001CA5BA /* reload.png */; };
+		D329D90621DF6876001CA5BA /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = D329D90521DF6876001CA5BA /* stop.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		D329D8ED21DF5E9E001CA5BA /* exaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D329D8F121DF5E9E001CA5BA /* exaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exaUITests.swift; sourceTree = "<group>"; };
 		D329D8F321DF5E9E001CA5BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D329D8FF21DF6863001CA5BA /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = ../../../../../Downloads/hangge_550/hangge_550/back.png; sourceTree = "<group>"; };
+		D329D90121DF686B001CA5BA /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forward.png; path = ../../../../../Downloads/hangge_550/hangge_550/forward.png; sourceTree = "<group>"; };
+		D329D90321DF6871001CA5BA /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reload.png; path = ../../../../../Downloads/hangge_550/hangge_550/reload.png; sourceTree = "<group>"; };
+		D329D90521DF6876001CA5BA /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop.png; path = ../../../../../Downloads/hangge_550/hangge_550/stop.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 		D329D8D021DF5E98001CA5BA /* exa */ = {
 			isa = PBXGroup;
 			children = (
+				D329D8FF21DF6863001CA5BA /* back.png */,
+				D329D90121DF686B001CA5BA /* forward.png */,
+				D329D90321DF6871001CA5BA /* reload.png */,
+				D329D90521DF6876001CA5BA /* stop.png */,
 				D329D8D121DF5E98001CA5BA /* AppDelegate.swift */,
 				D329D8D321DF5E98001CA5BA /* ViewController.swift */,
 				D329D8D521DF5E98001CA5BA /* Main.storyboard */,
@@ -229,9 +241,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D329D90021DF6864001CA5BA /* back.png in Resources */,
 				D329D8DC21DF5E9D001CA5BA /* LaunchScreen.storyboard in Resources */,
 				D329D8D921DF5E9D001CA5BA /* Assets.xcassets in Resources */,
+				D329D90621DF6876001CA5BA /* stop.png in Resources */,
 				D329D8D721DF5E98001CA5BA /* Main.storyboard in Resources */,
+				D329D90421DF6871001CA5BA /* reload.png in Resources */,
+				D329D90221DF686C001CA5BA /* forward.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
