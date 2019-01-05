@@ -11,7 +11,7 @@ import WebKit
 class ViewController: UIViewController {
     lazy private var progressView: UIProgressView = {
         self.progressView = UIProgressView.init(frame: CGRect(x: CGFloat(0), y: CGFloat(65), width: UIScreen.main.bounds.width, height: 2))
-        self.progressView.tintColor = UIColor.green      // 进度条颜色
+        self.progressView.tintColor = UIColor.blue      // 进度条颜色
         self.progressView.trackTintColor = UIColor.white // 进度条背景色
         return self.progressView
     }()
@@ -56,6 +56,9 @@ class ViewController: UIViewController {
         let urls = textfile.text
         webview.load(NSURLRequest(url: NSURL(string: urls!)! as URL)as URLRequest)
     }
+    @IBAction func stopclick(_ sender: Any) {
+        webview.stopLoading()
+    }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         print("开始获取网页内容")
@@ -75,6 +78,5 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
 }

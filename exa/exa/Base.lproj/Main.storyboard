@@ -21,7 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OES-oD-NaU">
                                 <rect key="frame" x="319" y="74" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="进入"/>
+                                <state key="normal" title="进入">
+                                    <color key="titleColor" red="0.19945876497896531" green="0.57676017505171895" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="searchclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIL-L0-GUR"/>
                                 </connections>
@@ -46,6 +48,9 @@
                                 <rect key="frame" x="319" y="833" width="39" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="stop.png"/>
+                                <connections>
+                                    <action selector="stopclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzA-NA-h4Z"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.baidu.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tI9-r6-gOH">
                                 <rect key="frame" x="42" y="74" width="264" height="30"/>
