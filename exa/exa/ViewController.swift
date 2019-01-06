@@ -59,19 +59,6 @@ class ViewController: UIViewController {
     @IBAction func stopclick(_ sender: Any) {
         webview.stopLoading()
     }
-    
-    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        print("开始获取网页内容")
-    }
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("加载完成")
-    }
-    
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        print("加载失败")
-    }
-    
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         decisionHandler(.allow);
     }
