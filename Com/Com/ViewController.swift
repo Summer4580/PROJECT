@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var resulttxt: UILabel!
     var fristval:Double = 0
     var sencendval:Double = 0
+    var thridval:Double = 0
+    var one:Double = 0
+    var two:Double = 0
+    var tap:Int = 0
     var fhval:Int = 0
+    var fhval2:Int = 0
     var isfinash:Bool = false    //判断文本框是否为空
     
 /*
@@ -51,17 +56,124 @@ class ViewController: UIViewController {
     @IBAction func setSign(_ sender: UIButton) {
         if(fristval == 0){
             fristval = Double(resulttxt.text!)!
+            fhval = sender.tag
+            isfinash = true
+        }else if(sencendval == 0){
+            sencendval = Double(resulttxt.text!)!
+            fhval2 = sender.tag
+            tap = 1
+            isfinash = true
+            
         }else{
-            onCCT(sender)
+            thridval = Double(resulttxt.text!)!
+            if(fhval2 == 3 || fhval2 == 4){
+                switch (fhval2){
+                case 3:
+                    sencendval *= thridval
+                case 4:
+                    if(thridval != 0)
+                    {
+                        sencendval /= thridval
+                    }
+                default:
+                    break
+                }
+                fhval2 = 0
+            }else if(fhval2 == 1 || fhval2 == 2){
+                switch (fhval){
+                case 1:
+                    fristval += sencendval
+                case 2:
+                    fristval -= sencendval
+                case 3:
+                    fristval *= sencendval
+                case 4:
+                    fristval /= sencendval
+                default:
+                    break
+                }
+                fhval = fhval2
+                sencendval = thridval
+            }
         }
-        fhval = sender.tag
-        isfinash = true
+        if(tap == 1 )
+        {
+            fhval2 = sender.tag
+        }
+        resulttxt.text = ""
     }
     
     
     @IBAction func onCCT(_ sender: Any) {
-        if  fhval != 0 {
-//            sencendval = (resulttxt.text! as NSString).doubleValue
+        if  fhval2 != 0 {
+            thridval = Double(resulttxt.text!)!
+            if(fhval2 == 3 || fhval2 == 4){
+                switch (fhval2){
+                case 3:
+                    sencendval *= thridval
+                case 4:
+                    if(thridval != 0)
+                    {
+                        sencendval /= thridval
+                    }
+                default:
+                    break
+                }
+                fhval2 = 0
+            }else if(fhval2 == 1 || fhval2 == 2){
+                switch (fhval){
+                case 1:
+                    fristval += sencendval
+                case 2:
+                    fristval -= sencendval
+                case 3:
+                    fristval *= sencendval
+                case 4:
+                    fristval /= sencendval
+                default:
+                    break
+                }
+                fhval = fhval2
+                sencendval = thridval
+            }
+            switch (fhval){
+            case 1:
+                fristval += sencendval
+            case 2:
+                fristval -= sencendval
+            case 3:
+                fristval *= sencendval
+            case 4:
+                if(sencendval != 0)
+                {
+                    fristval /= sencendval
+                }
+            default:
+                break
+            }
+            var result:String = String(fristval)
+            let len = result.index(of:".")
+            let str = "0"+result.substring(from: len!)
+            
+            if ((Double(str)!) == 0)
+            {
+                result = result.substring(to: len!)
+            }
+            if(sencendval==0 && fhval==4)
+            {
+                resulttxt.text! = "ERROR"
+                fristval = 0
+            }
+            else
+            {
+                resulttxt.text! = result
+            }
+            fhval = 0
+            fhval2 = 0
+            tap = 0
+            isfinash = true
+        }
+        if  fhval2 == 0{
             sencendval = Double(resulttxt.text!)!
             switch (fhval){
             case 1:
@@ -96,6 +208,7 @@ class ViewController: UIViewController {
                 resulttxt.text! = result
             }
             fhval = 0
+            fhval2 = 0
             isfinash = true
         }
     }
